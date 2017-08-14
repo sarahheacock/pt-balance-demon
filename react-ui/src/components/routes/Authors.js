@@ -8,11 +8,11 @@ import Nancy from './aboutTabs/Nancy';
 
 
 const chop = (name) => {
-  return name.substr(0, name.indexOf(','));
+  return name;
 }
 
 const link = (name) => {
-  return name.substr(0, name.indexOf(',')).toLowerCase().trim().replace(/\s/g, "-");
+  return name.toLowerCase().trim().replace(/\s/g, "-");
 }
 
 const Authors = (props) => {

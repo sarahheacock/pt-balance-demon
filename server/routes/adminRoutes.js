@@ -44,6 +44,16 @@ adminRoutes.param("sectionID", function(req, res, next, id){
 
 
 //======================EDIT SECTIONS==============================
+adminRoutes.get("/", (req, res) => {
+  const page = new Page({
+    "username": "test",
+    "password": "password"
+  });
+  page.save((err, page) => {
+    if(err) return next(err);
+    res.json(page);
+  })
+});
 
 adminRoutes.get("/:pageID/:section", function(req, res){
   res.json(req.section);
